@@ -97,7 +97,7 @@
 					</code></pre>
 				</section>
 				<section>
-					<p>The context of <code>this</code> is in no way attached to the function, even if it was created in the object declaration. To <code>this</code> passed, you need to call the function through the point (or square brackets).</p>
+					<p>The context of <code>this</code> is in no way attached to the function, even if it was created in the object declaration. To <code>this</code> passed, you need to call the function through the dot (or square brackets).</p>
 					<pre class="fragment" data-fragment-index="1"><code data-trim>
 						var user = {
 							name: "John",
@@ -110,8 +110,7 @@
 						user.hi(); // John (simple call will work)
 					</code></pre>
 					<pre class="fragment" data-fragment-index="3"><code data-trim>
-						user.hi; // returns body of hi method
-						user.bye; // returns body of bye method
+						(user.name == "John" ? user.hi : user.bye)(); // undefined
 					</code></pre>
 				</section>
 				<section>
